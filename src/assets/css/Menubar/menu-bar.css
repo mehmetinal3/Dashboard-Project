@@ -1,0 +1,206 @@
+.sidebars{
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.pragmatic-text {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.pragmatic-text.collapsed {
+  margin-left: 15px;
+}
+
+.logo {
+  width: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pragmatic {
+  font-weight: 500;
+  color: rgb(73, 89, 105);
+  font-size: 20px;
+  cursor: pointer;
+  text-shadow: 0px 0px 1px rgb(255, 255, 255),0px 0px 1px rgb(0, 0, 0);
+}
+
+.menu-bar {
+  padding-top: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+.menu-bar:hover::-webkit-scrollbar-thumb {
+  background: rgba(204, 204, 204);
+}
+
+.title {
+  color: #4a596a59;
+  padding: 4px 0 0 10px;
+  font-size: 12px;
+  font-weight: 320;
+}
+
+.title.collapsed {
+  text-align: center;
+  color: #4a596a59;
+  font-size: 12px;
+  font-weight: 320;
+}
+
+.menu-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #4a596a;
+  height: 40px;
+  padding: 0px 44px 0px 20px;
+}
+
+.menu-title.collapsed {
+  height: 58px;
+  padding: 0 44px 0 22px;
+}
+
+.menu-title.collapsed:hover {
+  background-color: lightgray;
+}
+
+.menu-title:hover .menu-items::after {
+  width: 100px;
+  opacity: 1;
+}
+
+.menu-title .mdi {
+  color: rgb(73, 89, 105);
+  margin-right: 5px;
+}
+
+.menu-title .mdi.collapsed {
+  padding: 0 10px;
+  margin-left: 5px;
+}
+
+.menu-items {
+  position: relative;
+  font-size: 14px;
+  width: 100%;
+  color: rgb(73, 89, 105);
+}
+
+.menu-items::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(73, 89, 105);
+  transition: width 0.3s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 0.15s;
+  opacity: 0;
+}
+
+.menu-items-children {
+  list-style-type: none;
+  border-left: 2px solid #4a596a;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 40px;
+  margin-left: 28px;
+  align-items: center;
+  cursor: pointer;
+  color: #4a596a;
+  padding-left: 5px;
+}
+
+.menu-items-children2 {
+  list-style-type: none;
+  line-height: 40px;
+  align-items: center;
+  cursor: pointer;
+  color: #4a596a;
+  padding-left: 5px;
+  white-space: nowrap;
+}
+
+.menu-items-children3 {
+  list-style-type: none;
+  line-height: 40px;
+  margin-left: 25px;
+  align-items: center;
+  cursor: pointer;
+  color: #4a596a;
+  padding-left: 5px;
+  white-space: nowrap;
+}
+
+.menu-title-children {
+  display: block;
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.menu-bar-list {
+  list-style-type: none;
+}
+
+.menu-title svg {
+  width: 12px;
+  transition: transform 0.3s ease;
+}
+
+.el-icon svg.rotated {
+  transform: rotate(180deg);
+}
+
+.collapse {
+  color: #5f8fdf;
+  background-color: #dfe8f9;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  visibility: visible;
+  width: 100px;
+  text-align: center;
+}
+
+.collapse i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.collapse.no-margin {
+  width: 30px;
+  margin-left: 32px;
+}
+
+/* Scrollbar stilini tanımlama */
+.menu-bar::-webkit-scrollbar {
+  width: 6px; /* Scrollbar genişliği */
+}
+
+.menu-bar::-webkit-scrollbar-thumb {
+  background: rgba(204, 204, 204, 0); /* Thumb (kaydırıcı) rengi */
+  border-radius: 6px; /* Thumb köşe yuvarlama */
+}
+
+.menu-bar::-webkit-scrollbar-thumb:hover {
+  background: #aaa; /* Hover durumu için thumb rengi */
+}

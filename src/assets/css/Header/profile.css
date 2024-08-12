@@ -1,0 +1,56 @@
+.user-picture {
+  cursor: pointer;
+  height: 32px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.profile .tooltip {
+  position: absolute;
+  overflow: hidden;
+  top: 35px;
+  padding: 5px 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.profile .tooltip.show {
+  opacity: 1;
+  max-height: 150px;
+}
+
+.profile-option {
+  display: flex;
+  background-color: white;
+  color: #606266;
+  align-items: center;
+  line-height: 22px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.profile-list {
+  list-style-type: none;
+  padding: 5px 0;
+  background-color: #fff;
+  margin: 0;
+}
+
+.profile-option span {
+  margin-right: 5px;
+}
+
+.profile hr {
+  color: #606266;
+  opacity: 0.3;
+}
+
+.profile-option:hover {
+  background-color: rgb(233, 245, 255);
+  color: rgb(80, 176, 255);
+}
